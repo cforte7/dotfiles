@@ -1,0 +1,18 @@
+# Database tunnels
+alias prod_db='ssh -N -L 5488:factorydata.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
+alias stage_db='ssh -N -L 5440:factorydata-stage-db.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
+alias sandbox_db='ssh -N -L 5441:factorydata-sandbox.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
+alias redshift_db='ssh -N -L 5442:sheik-redshift-replica.cqto9vvhlfqg.us-west-2.redshift.amazonaws.com:5439 chris@dev.amper.io'
+alias demo_db='ssh -N -L 5443:factorydata-demo.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
+
+# Local Servers
+alias run-dev="SQLA_BE_QUIET=1 python manage.py runserver --settings=sheik.settings_dev"
+alias pbuild='LOCAL_STAGE=true npm run build:watch'
+alias flyrep='./flyway-7.5.4/flyway -configFiles=conf/factory_dev.conf repair'
+alias flymig='./flyway-7.5.4/flyway -configFiles=conf/factory_dev.conf migrate'alias local-shell='python manage.py shell --settings=sheik.settings_dev'
+
+# Other
+# interactively pick a log group, tail it, and forward args/options
+function cwt () {
+  cw tail $(cw ls groups | fzf) "$@"
+}
