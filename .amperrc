@@ -1,10 +1,3 @@
-# Database tunnels
-alias prod_db='ssh -N -L 5488:factorydata.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
-alias stage_db='ssh -N -L 5440:factorydata-stage-db.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
-alias sandbox_db='ssh -N -L 5441:factorydata-sandbox.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
-alias redshift_db='ssh -N -L 5442:sheik-redshift-replica.cqto9vvhlfqg.us-west-2.redshift.amazonaws.com:5439 chris@dev.amper.io'
-alias demo_db='ssh -N -L 5443:factorydata-demo.cw1xyyq0q5fq.us-west-2.rds.amazonaws.com:5432 chris@dev.amper.io'
-
 # Local Servers
 alias run-dev="SQLA_BE_QUIET=1 python manage.py runserver --settings=sheik.settings_dev"
 alias pbuild='LOCAL_STAGE=true npm run build:watch'
