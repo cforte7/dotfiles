@@ -7,8 +7,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 source /usr/local/share/zsh/site-functions/cw.zsh
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
-source ~/.amperrc
 
 # Command line shortcuts
 alias act='source .venv/bin/activate'
@@ -49,35 +47,35 @@ function gpb() {
   fi
 }
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-eval "$(pyenv init -)"
+# export NVM_DIR="$HOME/.nvm"
+#   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# eval "$(pyenv init -)"
 
-pyenvVirtualenvUpdatePrompt() {
-    RED='\[\e[0;31m\]'
-    GREEN='\[\e[0;32m\]'
-    BLUE='\[\e[0;34m\]'
-    RESET='\[\e[0m\]'
-    [ -z "$PYENV_VIRTUALENV_ORIGINAL_PS1" ] && export PYENV_VIRTUALENV_ORIGINAL_PS1="$PS1"
-    [ -z "$PYENV_VIRTUALENV_GLOBAL_NAME" ] && export PYENV_VIRTUALENV_GLOBAL_NAME="$(pyenv global)"
-    VENV_NAME="$(pyenv version-name)"
-    VENV_NAME="${VENV_NAME##*/}"
-    GLOBAL_NAME="$PYENV_VIRTUALENV_GLOBAL_NAME"
+# pyenvVirtualenvUpdatePrompt() {
+#     RED='\[\e[0;31m\]'
+#     GREEN='\[\e[0;32m\]'
+#     BLUE='\[\e[0;34m\]'
+#     RESET='\[\e[0m\]'
+#     [ -z "$PYENV_VIRTUALENV_ORIGINAL_PS1" ] && export PYENV_VIRTUALENV_ORIGINAL_PS1="$PS1"
+#     [ -z "$PYENV_VIRTUALENV_GLOBAL_NAME" ] && export PYENV_VIRTUALENV_GLOBAL_NAME="$(pyenv global)"
+#     VENV_NAME="$(pyenv version-name)"
+#     VENV_NAME="${VENV_NAME##*/}"
+#     GLOBAL_NAME="$PYENV_VIRTUALENV_GLOBAL_NAME"
 
-    # non-global versions:
-    COLOR="$BLUE"
-    # global version:
-    [ "$VENV_NAME" == "$GLOBAL_NAME" ] && COLOR="$RED"
-    # virtual envs:
-    [ "${VIRTUAL_ENV##*/}" == "$VENV_NAME" ] && COLOR="$GREEN"
+#     # non-global versions:
+#     COLOR="$BLUE"
+#     # global version:
+#     [ "$VENV_NAME" == "$GLOBAL_NAME" ] && COLOR="$RED"
+#     # virtual envs:
+#     [ "${VIRTUAL_ENV##*/}" == "$VENV_NAME" ] && COLOR="$GREEN"
 
-    if [ -z "$COLOR" ]; then
-        PS1="$PYENV_VIRTUALENV_ORIGINAL_PS1"
-    else
-        PS1="($COLOR${VENV_NAME}$RESET)$PYENV_VIRTUALENV_ORIGINAL_PS1"
-    fi
-    export PS1
-}
+#     if [ -z "$COLOR" ]; then
+#         PS1="$PYENV_VIRTUALENV_ORIGINAL_PS1"
+#     else
+#         PS1="($COLOR${VENV_NAME}$RESET)$PYENV_VIRTUALENV_ORIGINAL_PS1"
+#     fi
+#     export PS1
+# }
 
-export PROMPT_COMMAND="$PROMPT_COMMAND pyenvVirtualenvUpdatePrompt;"
+# export PROMPT_COMMAND="$PROMPT_COMMAND pyenvVirtualenvUpdatePrompt;"
