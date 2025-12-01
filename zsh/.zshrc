@@ -9,13 +9,14 @@ source $ZSH/oh-my-zsh.sh
 export ZSH="/Users/chrisforte/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-plugins=(git zsh-syntax-highlighting zsh-npm-scripts-autocomplete)
 
 export EDITOR="nvim"
 source /usr/local/share/zsh/site-functions/cw.zsh
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+plugins=(git zsh-syntax-highlighting zsh-npm-scripts-autocomplete)
 
 # Command line shortcuts
 alias act='source .venv/bin/activate'
