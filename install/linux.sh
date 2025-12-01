@@ -6,7 +6,7 @@ sudo apt-get install -y build-essential
 
 set -e
 if ! command -v brew >/dev/null; then
-  echo "Installing Homebrew"
+  echo "Installing Homebrew from linux.sh"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
