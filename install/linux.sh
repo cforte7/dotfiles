@@ -11,5 +11,5 @@ if ! command -v brew >/dev/null; then
 fi
 
 echo >>/home/ubuntu/.bashrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>/home/ubuntu/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>/home/ubuntu/.zshrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
