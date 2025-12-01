@@ -10,12 +10,12 @@ fi
 cd "$REPO"
 
 # Detect OS
-OS="$(uname -s)"
-if [ "$OS" = "Darwin" ]; then
-  ./install/mac.sh
-else
-  ./install/linux.sh
-fi
+# OS="$(uname -s)"
+# if [ "$OS" = "Darwin" ]; then
+# ./install/mac.sh
+# else
+# ./install/linux.sh
+# fi
 
 # Install common packages
 ./install/common.sh
