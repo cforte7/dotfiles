@@ -18,8 +18,8 @@ cd "$REPO"
 # fi
 
 # Install common packages
-./install/common.sh
+bash install/common.sh
 
-./stow.sh
+bash stow.sh
 
 echo "✔ Done. Restart your shell."
