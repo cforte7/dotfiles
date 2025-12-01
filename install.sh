@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+chmod +x install/*.sh
+chmod +x scripts/*.sh
+chmod +x bootstrap.sh
+
 REPO="$HOME/.dotfiles"
 
 if [ ! -d "$REPO" ]; then
