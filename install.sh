@@ -25,5 +25,8 @@ bash install/common.sh
 
 bash stow.sh
 
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "$HOME/.zshrc"
+
+
 cd $START
 echo "✔ Done. Restart your shell."

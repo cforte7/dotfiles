@@ -2,7 +2,7 @@
 
 # List of directories to stow
 DOTFILES_DIR="$HOME/dotfiles"
-STOW_DIRS=("zsh") # Add your directories here
+STOW_DIRS=("zsh" "tmux") # Add your directories here
 
 cd "$DOTFILES_DIR"
 for dir in "${STOW_DIRS[@]}"; do
