@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-REPO="$HOME/.dotfiles"
+REPO="$HOME/dotfiles"
 
-if [ ! -d "$REPO" ]; then
-  git clone https://github.com/cforte7/dotfiles.git "$REPO"
-fi
+START="$(pwd)"
+# Remove existing ~/.dotfiles if it exists
+[ -d ~/dotfiles ] && rm -rf ~/dotfiles
 
-cd "$REPO"
+# Copy current directory to ~/dotfiles
+cp -r . ~/dotfiles
+cd ~/dotfiles
 
 # Detect OS
 OS="$(uname -s)"
@@ -18,8 +20,10 @@ else
 fi
 
 # Install common packages
+printf "Running common.sh\n\n"
 bash install/common.sh
 
 bash stow.sh
 
+cd $START
 echo "✔ Done. Restart your shell."
