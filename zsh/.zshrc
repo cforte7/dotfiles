@@ -11,7 +11,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/.p10k.zsh
 export EDITOR="nvim"
-plugins=(git zsh-npm-scripts-autocomplete)
+plugins=(git zsh-npm-scripts-autocomplete zsh-autosuggestions zsh-syntax-highlighting)
 
 # Command line shortcuts
 alias act='source .venv/bin/activate'
@@ -34,6 +34,7 @@ alias cival='circleci config validate'
 alias gcob='git checkout -b '
 alias gaa="git add ."
 alias gp='git push origin "$(git rev-parse --abbrev-ref HEAD)"'
+alias gd='git diff'
 function gpb() {
   branch=$(pbpaste)
   read -qs "tmp?Create branch: $branch ? Y/n"
