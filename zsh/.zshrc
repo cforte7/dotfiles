@@ -13,8 +13,7 @@ source $HOME/.p10k.zsh
 export EDITOR="nvim"
 plugins=(git zsh-npm-scripts-autocomplete zsh-autosuggestions zsh-syntax-highlighting)
 
-# Command line shortcuts
-alias act='source .venv/bin/activate'
+# git aliases
 alias pm="git pull --ff-only origin master 2> /dev/null || git pull --ff-only origin main"
 alias cm="gco master -- 2> /dev/null || gco main --"
 alias gs="git status"
@@ -26,9 +25,6 @@ alias glo1='glo -n1'
 alias glo5='glo -n5'
 alias glo10='glo -n10'
 alias grbi='git rebase -i'
-alias ezsh='code ~/.zshrc'
-alias sz='. ~/.zshrc'
-alias get-aliases='cat ~/.zshrc | grep alias'
 alias gdc='git diff --cached'
 alias cival='circleci config validate'
 alias gcob='git checkout -b '
@@ -47,3 +43,11 @@ function gpb() {
     echo "Exiting!"
   fi
 }
+# dev aliases
+alias act='source .venv/bin/activate'
+
+# meta aliases
+alias get-aliases='cat ~/.zshrc | grep alias'
+alias ezsh='code ~/.zshrc'
+alias sz='. ~/.zshrc'
+
