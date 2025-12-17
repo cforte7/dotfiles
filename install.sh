@@ -16,7 +16,7 @@ OS="$(uname -s)"
 if [ "$OS" = "Darwin" ]; then
   bash install/mac.sh
 else
-  bash install/linux.sh
+  source install/linux.sh
 fi
 
 # Install common packages
