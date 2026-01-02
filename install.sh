@@ -25,7 +25,11 @@ bash install/common.sh
 
 bash stow.sh
 
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "$HOME/.zshrc"
+
+if [ "$OS" != "Darwin" ]; then
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.zshrc"
+fi
+
 
 
 cd $START
