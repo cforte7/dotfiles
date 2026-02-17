@@ -7,7 +7,6 @@ brew "tmuxinator"
 brew "nvm" 
 brew "fd"
 brew "jq"
-brew "zig"
 
 cask "font-hack-nerd-font"
 cask "ghostty"
