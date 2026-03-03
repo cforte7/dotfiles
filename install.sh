@@ -20,15 +20,15 @@ else
 fi
 
 # Install common packages
-printf "Running common.sh\n\n"
-bash install/common.sh
+# printf "Running common.sh\n\n"
+# bash install/common.sh
 
 bash stow.sh
 
 
-if [ "$OS" != "Darwin" ]; then
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.zshrc"
-fi
+# if [ "$OS" != "Darwin" ]; then
+  # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.zshrc"
+# fi
 
 
 
