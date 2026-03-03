@@ -20,8 +20,8 @@ else
 fi
 
 # Install common packages
-# printf "Running common.sh\n\n"
-# bash install/common.sh
+printf "Running common.sh\n\n"
+bash install/common.sh
 
 bash stow.sh
 
