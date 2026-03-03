@@ -2,13 +2,13 @@
 set -e
 
 printf "Starting Common\n"
-BREWFILE="$HOME/dotfiles/brew/Brewfile"
+# BREWFILE="$HOME/dotfiles/brew/Brewfile"
 
-if [ -f "$BREWFILE" ]; then
-  printf "Running Brewfile..."
-  brew bundle --file="$BREWFILE"
-fi
-printf "Brewfile complete\n\n"
+# if [ -f "$BREWFILE" ]; then
+#   printf "Running Brewfile..."
+#   brew bundle --file="$BREWFILE"
+# fi
+# printf "Brewfile complete\n\n"
 
 # Basic check and remove
 if [ -d ~/.oh-my-zsh ]; then
