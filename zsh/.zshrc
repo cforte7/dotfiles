@@ -30,7 +30,6 @@ alias glo5='glo -n5'
 alias glo10='glo -n10'
 alias grbi='git rebase -i'
 alias gdc='git diff --cached'
-alias cival='circleci config validate'
 alias gcob='git checkout -b '
 alias gaa="git add ."
 alias ga="git add"
@@ -48,11 +47,11 @@ function gpb() {
     echo "Exiting!"
   fi
 }
+
 # dev aliases
 alias act='source .venv/bin/activate'
-
-# other aliases
 alias n='nvim'
+alias ddog='npx ddog'
 
 # meta aliases
 alias get-aliases='cat ~/.zshrc | grep alias'
