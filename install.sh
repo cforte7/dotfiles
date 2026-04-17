@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh 
+#!/usr/bin/env bash
 set -e
 
 REPO="$HOME/dotfiles"
@@ -16,7 +16,7 @@ OS="$(uname -s)"
 if [ "$OS" = "Darwin" ]; then
   bash install/mac.sh
 else
-  source install/linux.sh
+  bash install/linux.sh
 fi
 
 # Install common packages

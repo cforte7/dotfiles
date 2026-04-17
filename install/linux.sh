@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh 
+#!/usr/bin/env bash
 set -e
 printf "Running linux.sh\n"
 sudo apt-get update
