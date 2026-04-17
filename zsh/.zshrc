@@ -52,6 +52,7 @@ function gpb() {
 alias act='source .venv/bin/activate'
 alias n='nvim'
 alias ddog='npx ddog'
+alias dcu='docker compose up -d'
 
 # meta aliases
 alias get-aliases='cat ~/.zshrc | grep alias'
