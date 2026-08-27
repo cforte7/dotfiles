@@ -10,12 +10,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export ZSH=$HOME/.oh-my-zsh
+plugins=(git zsh-npm-scripts-autocomplete zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/.p10k.zsh
 export EDITOR="nvim"
-plugins=(git zsh-npm-scripts-autocomplete zsh-autosuggestions zsh-syntax-highlighting)
 
 # git aliases
 alias pm="git pull --ff-only origin master 2> /dev/null || git pull --ff-only origin main"
