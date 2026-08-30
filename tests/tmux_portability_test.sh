@@ -34,3 +34,12 @@ if [ "$actual_shell" != "$expected_shell" ] || [ "$actual_command" != "$expected
 fi
 
 printf 'ok - tmux config preserves detected shell defaults\n'
+
+binding="$(tmux -L "$SOCKET" list-keys -T prefix C-a)"
+if [[ "$binding" != *" last-window" ]]; then
+  printf 'not ok - prefix C-a switches to the last window\n'
+  printf 'actual binding=%s\n' "$binding"
+  exit 1
+fi
+
+printf 'ok - prefix C-a switches to the last window\n'
