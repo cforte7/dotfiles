@@ -15,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/.p10k.zsh
+
 export EDITOR="nvim"
 
 # git aliases
@@ -59,3 +60,5 @@ alias get-aliases='cat ~/.zshrc | grep alias'
 alias ezsh='code ~/.zshrc'
 alias sz='. ~/.zshrc'
 
+
+PATH=$PATH:$HOME/.local/bin
