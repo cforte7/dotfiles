@@ -48,4 +48,12 @@ install_zsh_plugin \
   zsh-syntax-highlighting \
   https://github.com/zsh-users/zsh-syntax-highlighting.git
 
+
+if command -v omp >/dev/null 2>&1; then
+  printf "omp is already installed. Skipping...\n"
+else
+  printf "Installing omp\n"
+  curl -fsSL https://omp.sh/install | sh
+fi
+
 printf "End of common\n\n"
