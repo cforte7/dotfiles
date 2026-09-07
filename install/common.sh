@@ -45,17 +45,17 @@ install_zsh_plugin \
 
 install_tool() {
   local name="$1"
-  shift
+  local url="$2"
+
   if command -v "$name" >/dev/null 2>&1; then
     printf "%s is already installed. Skipping...\n" "$name"
   else
     printf "Installing %s\n" "$name"
-    "$@"
+    curl -fsSL "$url" | sh
   fi
 }
-
-install_tool hunk "curl -fsSL https://hunk.dev/install.sh | sh"
-install_tool omp "curl -fsSL https://omp.sh/install | sh"
-install_tool bun "curl -fsSL https://bun.sh/install | bash"
+install_tool hunk https://hunk.dev/install.sh
+install_tool omp https://omp.sh/install
+install_tool bun https://bun.sh/install
 
 printf "End of common\n\n"
