@@ -42,11 +42,19 @@ install_zsh_plugin \
   https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 
-if command -v omp >/dev/null 2>&1; then
-  printf "omp is already installed. Skipping...\n"
-else
-  printf "Installing omp\n"
-  curl -fsSL https://omp.sh/install | sh
-fi
+
+install_tool() {
+  local name="$1"
+  shift
+  if command -v "$name" >/dev/null 2>&1; then
+    printf "%s is already installed. Skipping...\n" "$name"
+  else
+    printf "Installing %s\n" "$name"
+    "$@"
+  fi
+}
+
+install_tool hunk "curl -fsSL https://hunk.dev/install.sh | sh"
+install_tool omp "curl -fsSL https://omp.sh/install | sh"
 
 printf "End of common\n\n"
