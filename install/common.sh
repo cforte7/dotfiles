@@ -56,5 +56,6 @@ install_tool() {
 
 install_tool hunk "curl -fsSL https://hunk.dev/install.sh | sh"
 install_tool omp "curl -fsSL https://omp.sh/install | sh"
+install_tool bun "curl -fsSL https://bun.sh/install | bash"
 
 printf "End of common\n\n"
