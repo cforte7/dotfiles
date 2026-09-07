@@ -8,6 +8,7 @@ brew "nvm"
 brew "fd"
 brew "jq"
 brew "bat"
+brew "hunk"
 
 cask "font-hack-nerd-font"
 cask "ghostty"
