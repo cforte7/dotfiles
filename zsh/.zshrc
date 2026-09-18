@@ -36,6 +36,7 @@ alias gaa="git add ."
 alias ga="git add"
 alias gp='git push origin "$(git rev-parse --abbrev-ref HEAD)"'
 alias gd='git diff'
+alias hd='hunk diff'
 function gpb() {
   branch=$(pbpaste)
   read -qs "tmp?Create branch: $branch ? Y/n"
