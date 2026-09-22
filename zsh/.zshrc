@@ -63,3 +63,6 @@ alias sz='. ~/.zshrc'
 
 
 PATH=$PATH:$HOME/.local/bin
+
+# TODO: brittle, will only work on personal laptop
+PATH=/Users/christopherforte/.opencode/bin:$PATH
