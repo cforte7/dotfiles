@@ -41,8 +41,6 @@ install_zsh_plugin \
   zsh-syntax-highlighting \
   https://github.com/zsh-users/zsh-syntax-highlighting.git
 
-
-
 install_tool() {
   local name="$1"
   local url="$2"
@@ -57,5 +55,6 @@ install_tool() {
 install_tool hunk https://hunk.dev/install.sh
 install_tool omp https://omp.sh/install
 install_tool bun https://bun.sh/install
+install_tool opencode https://opencode.ai/v2/install
 
 printf "End of common\n\n"
